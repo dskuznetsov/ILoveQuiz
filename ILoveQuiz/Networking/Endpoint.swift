@@ -40,7 +40,7 @@ enum ILoveQuizEndpoint: Endpoint {
         case .games:
             return "/api/games"
         case .rating:
-            return "/api/rating"
+            return "/api/rating/4"
         }
     }
     

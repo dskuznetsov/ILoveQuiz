@@ -11,7 +11,7 @@ import Foundation
 class ILoveQuizClient: APIClient {
     static let baseUrl = "https://ilovequiz.ru"
     
-    func fetchGames(with endpoint: ILoveQuizEndpoint, completion: @escaping (Either<Games>) -> Void) {
+    func fetchGames(with endpoint: ILoveQuizEndpoint, completion: @escaping (Either<Seasons>) -> Void) {
         let request = endpoint.request
         get(with: request, completion: completion)
     }

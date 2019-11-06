@@ -11,6 +11,7 @@ import UIKit
 class GameModel {
     // MARK: Properties
     private let client: APIClient
+    var seasons: Seasons = []
     var games: Games = []
     
     // MARK: UI
@@ -33,8 +34,9 @@ class GameModel {
             let endpoint = ILoveQuizEndpoint.games
             client.fetchGames(with: endpoint) { (either) in
                 switch either {
-                case .success(let games):
-                    self.games = games
+                case .success(let seasons):
+                    self.seasons = seasons
+                    self.games = seasons[0].games
                     self.isLoading = false
                     self.reloadData?()
                 case .error(let error):

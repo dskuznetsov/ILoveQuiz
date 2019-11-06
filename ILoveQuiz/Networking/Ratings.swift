@@ -11,5 +11,11 @@ import Foundation
 typealias Ratings = [Rating]
 
 struct Rating: Codable {
-    let title: String
+    let team: String
+    let rating: TeamRate
+}
+
+struct TeamRate: Codable {
+    let games: Int
+    let points: Float
 }

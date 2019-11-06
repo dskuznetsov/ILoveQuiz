@@ -8,6 +8,13 @@
 
 import Foundation
 
+typealias Seasons = [Season]
+
+struct Season: Codable {
+    let season: String?
+    let games: Games
+}
+
 typealias Games = [Game]
 
 struct Game: Codable {

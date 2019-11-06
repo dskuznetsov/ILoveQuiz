@@ -72,7 +72,7 @@ extension ViewController: UICollectionViewDataSource {
                         cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         if indexPath.section == 1 {
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ratingCellId", for: indexPath) as! RatingCell
-            cell.titleLabel.text = ratingsModel.ratings[indexPath.row].title
+            cell.titleLabel.text = ratingsModel.ratings[indexPath.row].team
             return cell
         }
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "gamesCellId", for: indexPath) as! GamesCell
